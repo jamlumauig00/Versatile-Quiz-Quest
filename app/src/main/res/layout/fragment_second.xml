@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="30dp"
+    app:cardBackgroundColor="#8C75C5"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    tools:context=".Fragment.SecondFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:liftOnScroll="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Toolbar -->
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/detail_toolbar"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_weight="1"
+                    app:layout_collapseMode="pin"
+                    app:navigationIcon="@drawable/ic_up_button"
+                    app:titleTextAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <!-- TextView -->
+                <TextView
+                    android:id="@+id/timerTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/questions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/idCategoryImage"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/sports" />
+
+            <TextView
+                android:id="@+id/idCategoryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#F8F8F8"
+                android:textStyle="italic"
+                tools:text="Subtitle" />
+
+            <TextView
+                android:id="@+id/idQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:shadowColor="#2196F3"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:textAllCaps="true"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <!-- <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/idChoiceA"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_margin="8dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/btn_bg"
+                 android:padding="5dp"
+                 android:text="Choice A"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/idChoiceB"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_margin="8dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/btn_bg"
+                 android:padding="5dp"
+                 android:text="Choice B"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/idChoiceC"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_margin="8dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/btn_bg"
+                 android:padding="5dp"
+                 android:text="Choice C"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />
+
+             <androidx.appcompat.widget.AppCompatButton
+                 android:id="@+id/idChoiceD"
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:layout_margin="8dp"
+                 android:layout_weight="1"
+                 android:background="@drawable/btn_bg"
+                 android:padding="5dp"
+                 android:text="Choice D"
+                 android:textAllCaps="false"
+                 android:textColor="@color/white" />-->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+            <LinearLayout
+                android:id="@+id/optionsLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+            </ScrollView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/score"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/scoretv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="50sp"
+                android:textColor="@color/white"
+                android:layout_marginVertical="20dp"
+                android:text="You"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/customButtonCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="#B2548B"
+                app:cardCornerRadius="20sp"
+                app:cardElevation="4dp">
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:shadowColor="#F2D794"
+                    android:shadowDx="5"
+                    android:shadowDy="3"
+                    android:shadowRadius="5"
+                    android:text="Submit"
+                    android:textColor="#000000"
+                    android:textSize="25sp" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "751261343333",
+    "firebase_url": "https://jamgames-34603-default-rtdb.firebaseio.com",
+    "project_id": "jamgames-34603",
+    "storage_bucket": "jamgames-34603.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:751261343333:android:7ceae36f8b294926fb308c",
+        "android_client_info": {
+          "package_name": "jamsx.versatile.quizquest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkPObWxr9vkAjxFM3EKgwoH4eQZmHenHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
